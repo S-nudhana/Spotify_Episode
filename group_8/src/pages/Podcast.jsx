@@ -17,11 +17,11 @@ export default function Podcast() {
   const [podcastData, setPodcastData] = useState();
   const [episodeData, setEpisodeData] = useState();
   const getPodcastData = async () => {
-      const PodcastData = await axios.get(`http://s662csc105v008.sit.kmutt.ac.th:3000/podcastshow?podcastId=${id}`);
+      const PodcastData = await axios.get(`http://localhost:3000/podcastshow?podcastId=${id}`);
       setPodcastData(PodcastData.data.data);
   };
   const getEpisodeData = async () => {
-    const EpisodeData = await axios.get(`http://s662csc105v008.sit.kmutt.ac.th:3000/podcastepisode?podcastId=${id}`);
+    const EpisodeData = await axios.get(`http://localhost:3000/podcastepisode?podcastId=${id}`);
     setEpisodeData(EpisodeData.data.data);
   }
   useEffect(() => {

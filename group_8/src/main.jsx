@@ -1,10 +1,9 @@
 import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import ReactDOM from 'react-dom/client';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import ReactDOM from 'react-dom/client'
 import './index.css'
-
-import Podcast from "./pages/Podcast";
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Podcast from "./pages/Podcast"
 import PodEpisode from './pages/PodcastEpisode';
 
 const theme = createTheme({

@@ -10,7 +10,7 @@ export default function PodcastEpisode() {
   const id = Number(episodeId.podcastEpisodeId);
   const [data, setData] = useState();
   const getEpisode = async () => {
-    const PodcastData = await axios.get(`http://s662csc105v008.sit.kmutt.ac.th:3000/one?podcastId=${id}`);
+    const PodcastData = await axios.get(`http://localhost:3000/one?podcastId=${id}`);
     const episodeData = PodcastData.data.data[0];
     setData(PodcastData.data.data[0]);
     if (episodeData && episodeData.show_id) {
@@ -20,7 +20,7 @@ export default function PodcastEpisode() {
   const [podcastAuthor, setPodcastAuthor] = useState();
   const [Id, setId] = useState();
   const getId = async (showId) => {
-      const PodcastAuthor = await axios.get(`http://s662csc105v008.sit.kmutt.ac.th:3000/podcastshow?podcastId=${showId}`);
+      const PodcastAuthor = await axios.get(`http://localhost:3000/podcastshow?podcastId=${showId}`);
       setPodcastAuthor(PodcastAuthor.data.data.author);
       setId(PodcastAuthor.data.data.id)
   };

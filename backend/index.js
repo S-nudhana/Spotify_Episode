@@ -14,7 +14,7 @@ connection.connect((err) => {
 	}
 });
 app.use(cors({
-		origin: "http://s662csc105v008.sit.kmutt.ac.th:5173",
+		origin: "http://localhost:5173",
 		credentials: true
 	}
 ));
